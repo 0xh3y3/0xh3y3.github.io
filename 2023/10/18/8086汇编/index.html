@@ -1,11 +1,15 @@
 <!DOCTYPE HTML>
-<html lang="en">
+<html lang="zh-CN">
 
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, Hexo">
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hex">
+    <meta name="keywords" content="0xh3y3">
+    <meta name="description" content="物理地址 &amp;#x3D; 段地址x16 + 偏移地址 &amp;#x3D; 基础地址 + 偏移地址
+1.debug的使用
+用Debug的R命令查看、改变CPU寄存器的内容：
+用Debug的D命令查看内存中的内容：
+用Debug的E命令改写内存中的内容">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -17,7 +21,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | Hexo</title>
+    <title>0xh3y3</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -45,8 +49,6 @@
 
 
     
-        <link rel="stylesheet" type="text/css" href="/css/reward.css">
-    
 
 
 
@@ -64,7 +66,7 @@
                     
                     <img src="/medias/logo.png" class="logo-img" alt="LOGO">
                     
-                    <span class="logo-span">Hexo</span>
+                    <span class="logo-span">0xh3y3</span>
                 </a>
             </div>
             
@@ -78,7 +80,7 @@
       
       <i class="fas fa-home" style="zoom: 0.6;"></i>
       
-      <span>Index</span>
+      <span>首页</span>
     </a>
     
   </li>
@@ -89,7 +91,7 @@
       
       <i class="fas fa-tags" style="zoom: 0.6;"></i>
       
-      <span>Tags</span>
+      <span>标签</span>
     </a>
     
   </li>
@@ -100,7 +102,7 @@
       
       <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
       
-      <span>Categories</span>
+      <span>分类</span>
     </a>
     
   </li>
@@ -111,7 +113,7 @@
       
       <i class="fas fa-archive" style="zoom: 0.6;"></i>
       
-      <span>Archives</span>
+      <span>归档</span>
     </a>
     
   </li>
@@ -122,7 +124,7 @@
       
       <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
       
-      <span>About</span>
+      <span>关于</span>
     </a>
     
   </li>
@@ -133,7 +135,7 @@
       
       <i class="fas fa-comments" style="zoom: 0.6;"></i>
       
-      <span>Contact</span>
+      <span>留言板</span>
     </a>
     
   </li>
@@ -144,14 +146,14 @@
       
       <i class="fas fa-address-book" style="zoom: 0.6;"></i>
       
-      <span>Friends</span>
+      <span>友情链接</span>
     </a>
     
   </li>
   
   <li>
     <a href="#searchModal" class="modal-trigger waves-effect waves-light">
-      <i id="searchIcon" class="fas fa-search" title="Search" style="zoom: 0.85;"></i>
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
     </a>
   </li>
   <li>
@@ -168,7 +170,7 @@
         
         <img src="/medias/logo.png" class="logo-img circle responsive-img">
         
-        <div class="logo-name">Hexo</div>
+        <div class="logo-name">0xh3y3</div>
         <div class="logo-desc">
             
             Never really desperate, only the lost of the soul.
@@ -184,7 +186,7 @@
 			
 			    <i class="fa-fw fas fa-home"></i>
 			
-			Index
+			首页
 		</a>
           
         </li>
@@ -195,7 +197,7 @@
 			
 			    <i class="fa-fw fas fa-tags"></i>
 			
-			Tags
+			标签
 		</a>
           
         </li>
@@ -206,7 +208,7 @@
 			
 			    <i class="fa-fw fas fa-bookmark"></i>
 			
-			Categories
+			分类
 		</a>
           
         </li>
@@ -217,7 +219,7 @@
 			
 			    <i class="fa-fw fas fa-archive"></i>
 			
-			Archives
+			归档
 		</a>
           
         </li>
@@ -228,7 +230,7 @@
 			
 			    <i class="fa-fw fas fa-user-circle"></i>
 			
-			About
+			关于
 		</a>
           
         </li>
@@ -239,7 +241,7 @@
 			
 			    <i class="fa-fw fas fa-comments"></i>
 			
-			Contact
+			留言板
 		</a>
           
         </li>
@@ -250,7 +252,7 @@
 			
 			    <i class="fa-fw fas fa-address-book"></i>
 			
-			Friends
+			友情链接
 		</a>
           
         </li>
@@ -334,12 +336,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -362,7 +364,7 @@
                 <div class="col s7">
                     
                           <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            <span class="chip bg-color">无标签</span>
                           </div>
                     
                 </div>
@@ -374,7 +376,7 @@
             <div class="post-info">
                 
                 <div class="post-date info-break-policy">
-                    <i class="far fa-calendar-minus fa-fw"></i>Publish Date:&nbsp;&nbsp;
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
                     2023-10-18
                 </div>
                 
@@ -396,19 +398,180 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <p><span style="background:#d3f8b6">物理地址 &#x3D; 段地址x16 + 偏移地址 &#x3D; 基础地址 + 偏移地址</span></p>
+<h2 id="1-debug的使用"><a href="#1-debug的使用" class="headerlink" title="1.debug的使用"></a><strong><font color="#c00000">1.debug的使用</font></strong></h2><ul>
+<li>用Debug的R命令查看、改变CPU寄存器的内容：</li>
+<li>用Debug的D命令查看内存中的内容：</li>
+<li>用Debug的E命令改写内存中的内容：</li>
+<li>用Debug的U命令将内存中的机器指令翻译成汇编指令：</li>
+<li>用Debug的T命令执行一条机器指令：</li>
+<li>用Debug的A命令以汇编指令的格式在内存中写入一条机器指令。</li>
+</ul>
+<h2 id="2-CS、IP"><a href="#2-CS、IP" class="headerlink" title="2.CS、IP"></a><strong><font color="#c00000">2.CS、IP</font></strong></h2><ul>
+<li>cs:段寄存器</li>
+<li>ip:偏移地址</li>
+<li>8086有四个段寄存器 CS DS SS ES 当CS为代码段寄存器IP为指令指针寄存器(偏移地址寄存器)<br>若想同时修改CS、P的内容，可用形如“jmp段地址：偏移地址”的指令完成<br><span style="background:#d3f8b6">jmp bx  jmp后接寄存器 改变IP（偏移）值</span></li>
+</ul>
+<h2 id="3-偏移地址ip"><a href="#3-偏移地址ip" class="headerlink" title="3.偏移地址ip"></a><strong><font color="#c00000">3.偏移地址ip</font></strong></h2><ul>
+<li>偏移地址为16位</li>
+<li>偏移地址的变化范围0-FFFFH</li>
+</ul>
+<h2 id="4-DS段寄存器-DS-address"><a href="#4-DS段寄存器-DS-address" class="headerlink" title="**4.DS段寄存器 DS:[address]"></a>**<font color="#c00000">4.DS段寄存器 DS:[address]</font></h2><ul>
+<li>86CPU不支持将数据直接放入段寄存器中需要使用一个普通寄存器做转换 mov al:[0]  一般形式寄存器:[] 如果缺省，则默认为ds段</li>
+</ul>
+<h2 id="5-内存单元"><a href="#5-内存单元" class="headerlink" title="**5.内存单元"></a>**<font color="#c00000">5.内存单元</font></h2><ul>
+<li>“[…]”表示一个内存单元，“[…]”中的0表示内存单元的偏移地址</li>
+</ul>
+<h2 id="6-指令"><a href="#6-指令" class="headerlink" title="6.指令"></a><strong><font color="#c00000">6.指令</font></strong></h2><ul>
+<li>inc 为自增指令     inc bx &#x3D;&#x3D;&gt; bx &#x3D; bx+1</li>
+<li>dec 自减指令</li>
+<li>loop循环中 有一个cx的寄存器在做自减运算即cx &#x3D; cx-1 直到cx&#x3D;0 为止跳出循环  用法如下： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> 用cx和1oop指令相配合实现循环功能的程序框架如下。</span><br><span class="line">	mov cx,循环次数</span><br><span class="line">S:</span><br><span class="line">	循环执行的程序段</span><br><span class="line">	loop s</span><br></pre></td></tr></table></figure></li>
+<li>CPU执行loop时，要进行两步操作:</li>
+</ul>
+<ol>
+<li>(cx) &#x3D; (cx)-1</li>
+<li>判断cx中的值,不为0则跳转到标号处执行,为0则向下执行<br>总之 <span style="background:#d3f8b6">loop做循环指令 cx放循环次数</span></li>
+</ol>
+<ul>
+<li>and 与指令，按位进行与运算  同1为1 不同为0</li>
+<li>or 或指令，按位进行或运算 有1为1 同0为0</li>
+<li>xor 异或指令，相同为0 不同为1</li>
+<li>div 除法指令</li>
+</ul>
+<ol>
+<li>除数:有8位和16位两种，在一个reg或内存单元中。</li>
+<li>被除数:默认放在ax或dx和ax中存放，dx存放高16位，ax放低16位。</li>
+<li>结果:如果除数为8位，则al存储除法操作的商，ah存储余数，如果除数位6位，则ax存储除法操作的商，dx存储除法操作的余数。</li>
+</ol>
+<h2 id="7-注意事项"><a href="#7-注意事项" class="headerlink" title="7.注意事项"></a><strong><font color="#c00000">7.注意事项</font></strong></h2><ol>
+<li>而在汇编源程序中，数据不能以字母开头，所以要在前面加0。比如，9138h在汇编源程序中可以直接写为“9138h”，而A000h在汇编源程序中要写为“0A000h”</li>
+<li>mov ds:[0],1 此时并不知道1是多长所以通过<span style="background:#d3f8b6">X ptr</span>操作符来指明内存长度,8086里可以为byte和word 一个word等于两个byte<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mov word ptr ds:[0],1</span><br><span class="line">inc byte ptr [bx] //bx自增1</span><br><span class="line">add word ptr [bp],2</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="8-栈"><a href="#8-栈" class="headerlink" title="8.栈"></a><strong><font color="#c00000">8.栈</font></strong></h2><ul>
+<li>SS:SP</li>
+</ul>
+<ol>
+<li>SS 指向栈的段地址</li>
+<li>SP 指向栈顶</li>
+</ol>
+<ul>
+<li>push ax</li>
+</ul>
+<ol>
+<li>sp&#x3D;sp-2 ss:sp指向当前栈顶前面的单元 以当前栈顶前面的单元为新的栈顶</li>
+<li>将ax中的内容送入ss:sp指向的内存单元处,ss:sp此时指向新的栈顶</li>
+</ol>
+<ul>
+<li>pop ax</li>
+</ul>
+<ol>
+<li>ss:sp处传入ax</li>
+<li>sp+&#x3D;2</li>
+</ol>
+<p><span style="background:#d3f8b6">注意:push和pop无论后面跟什么它都是操作字即16位</span></p>
+<h2 id="9-bx"><a href="#9-bx" class="headerlink" title="9.[bx]"></a><strong><font color="#c00000">9.[bx]</font></strong></h2><ul>
+<li>mov ax,[bx]             (ax) &#x3D; ((ds)*16+(bx))</li>
+<li>mov [bx],ax            ((ds)*16+(bx))&#x3D;(ax)</li>
+</ul>
+<h2 id="10-bx-idata"><a href="#10-bx-idata" class="headerlink" title="**10.[bx + idata]"></a>**<font color="#c00000">10.[bx + idata]</font></h2><p><font color="#548dd4">mov ax,[bx+200]</font></p>
+<ul>
+<li>含义:将一个内存单元的内容送入ax,长度为2个字节，偏移地址为bx的值+200，段地址是ds</li>
+<li>（ax） &#x3D; ((ds)*16+(bx)+200)<br>其他写法:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mov ax,[200+bx]</span><br><span class="line">mov ax,200[bx]</span><br><span class="line">mov ax,[bx].200</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="11-SI和DI"><a href="#11-SI和DI" class="headerlink" title="11.SI和DI"></a><font color="#c00000">11.SI和DI</font></h2><p>si和di也是寄存器，和bx功能相近</p>
+<ul>
+<li>用si和di实现将字符串‘welcome to masm！’复制到它后面的数据区中。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">assume cs:codesg,ds:datasg</span><br><span class="line">datasg segment</span><br><span class="line">	db &#x27;welcome to masm&#x27;</span><br><span class="line">	db &#x27;...............&#x27;</span><br><span class="line">datasg ends</span><br><span class="line">codesg segment</span><br><span class="line">start:</span><br><span class="line">	mov ax,datasg</span><br><span class="line">	mov ds,ax</span><br><span class="line">	mov si,0</span><br><span class="line">	mov di,16</span><br><span class="line"></span><br><span class="line">	mov cx,8</span><br><span class="line">s:  mov ax,[s1]</span><br><span class="line">	mov [di],ax</span><br><span class="line">	add si,2</span><br><span class="line">	add di,2</span><br><span class="line">	loop s</span><br><span class="line"></span><br><span class="line">	mov ah,41h</span><br><span class="line">	int 21h</span><br><span class="line">codesg ends</span><br><span class="line">end start</span><br></pre></td></tr></table></figure></li>
+<li>bx si di联合使用[bx+si]或者[bx+di]<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mov ax,[bx+si]</span><br><span class="line">mov ax,[bx][si]</span><br></pre></td></tr></table></figure></li>
+<li>更灵活的方式[bx+si+idata]和[bx+di+idata]<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mov ax,[bx+200+si]</span><br><span class="line">mov ax,[200+bx+si]</span><br><span class="line">mov ax,200[bx][si]</span><br><span class="line">mov ax,[bx]200[si]</span><br><span class="line">mov ax,[bx][si].200</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="12-寻址"><a href="#12-寻址" class="headerlink" title="12.寻址"></a><font color="#c00000">12.寻址</font></h2><ol>
+<li>[idata]用一个常量来表示地址，可用于直接定位一个内存单元；</li>
+<li>[bx]用一个变量来表示内存地址，可用于间接定位一个内存单元：</li>
+<li>[bx+idata]用一个变量和常量表示地址，可在一个起始地址的基础上用变量间接定位一个内存单元：</li>
+<li>[bx+si]用两个变量表示地址；</li>
+<li>[bx+si+idata]用两个变量和一个常量表示地址。<br>SA：段地址 EA：偏移地址<br>![[Pasted image 20231013153232.png]]</li>
+</ol>
+<h2 id="13-bp"><a href="#13-bp" class="headerlink" title="13.bp"></a><font color="#c00000">13.bp</font></h2><p><span style="background:#d3f8b6">mov ax,[bp] 默认是ss不是ds</span><br>同样<br>mov ax,[bp+si] 任然跟随ss</p>
+<h2 id="14-伪指令"><a href="#14-伪指令" class="headerlink" title="14.伪指令"></a><font color="#c00000">14.伪指令</font></h2><ol>
+<li>db：定义字节型数据 1字节</li>
+<li>dw：定义字型数据   2字节</li>
+<li>dd：用来定义double word 双字型数据 4字节</li>
+<li>dup：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">db 重复的次数 dup (重复的字节型数据)</span><br><span class="line">例：db 3 dup（0） --&gt; db 0，0，0</span><br><span class="line">dw 重复的次数 dup (重复的字型数据)</span><br><span class="line">dd 重复的次数 dup (重复的双字型数据)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="15-转移指令"><a href="#15-转移指令" class="headerlink" title="15.转移指令"></a><font color="#c00000">15.转移指令</font></h2><p>简单来讲能够修改cs和ip的指令都是转移指令<br>8086CPU的转移行为有如下几类：</p>
+<ol>
+<li>段内转移：只修改ip，比如jmp ax（近转移、短转移）</li>
+<li>段间转移：同时修改cs:ip，比如jmp 1000:0 （远转移）<br>8086cpu转移指令分类如下:</li>
+<li>无条件跳转</li>
+<li>条件跳转<br><code>jcxz 指令</code><br>指令格式：jcxz 标号 （如果(cx)&#x3D;0，转移到标号处执行）<br>操作：当(cx)&#x3D;0时候，(ip)&#x3D;(ip)+8位位移</li>
+<li>循环指令<br><code>loop指令</code></li>
+<li>过程</li>
+<li>中断</li>
+</ol>
+<h2 id="16-段内转移"><a href="#16-段内转移" class="headerlink" title="16.段内转移"></a><font color="#c00000">16.段内转移</font></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jmp short 标号  （ip）= （ip） + 8位位移</span><br><span class="line">jmp near ptr 标号  （ip）= （ip）+ 16位位移</span><br></pre></td></tr></table></figure>
+<ul>
+<li>8位位移&#x3D;标号处的地址-jmp指令后的第一个字节的地址</li>
+<li>short指明此处的位移为8位位移</li>
+<li>8位位移的范围-128~127，用补码表示</li>
+<li>8位位移由编译程序在编译时算出<br>16位类似</li>
+</ul>
+<h2 id="17-段间转移"><a href="#17-段间转移" class="headerlink" title="17.段间转移"></a><font color="#c00000">17.段间转移</font></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jmp far ptr 标号</span><br></pre></td></tr></table></figure>
+<h2 id="18-jmp与内存单元"><a href="#18-jmp与内存单元" class="headerlink" title="18.jmp与内存单元"></a><font color="#c00000">18.jmp与内存单元</font></h2><ol>
+<li>jmp word ptr 内存单元地址(段内转移)</li>
+<li>jmp dword ptr 内存单元地址(段间转移)</li>
+</ol>
+<h2 id="19-offest操作符"><a href="#19-offest操作符" class="headerlink" title="19.offest操作符"></a><font color="#c00000">19.offest操作符</font></h2><ul>
+<li>操作符offset在汇编语言中是由编译器处理的符号，它的功能是取得标号的偏移地址。  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">assume cs:codesg</span><br><span class="line">codesg segment</span><br><span class="line">	start:mov ax,offset start ;相当于mov ax,0</span><br><span class="line">	s:mov ax,offset s         ;相当于mov ax,3</span><br><span class="line">codesg ends</span><br><span class="line">end start</span><br></pre></td></tr></table></figure></li>
+</ul>
+<h2 id="20-call和ret指令"><a href="#20-call和ret指令" class="headerlink" title="20.call和ret指令"></a><font color="#c00000">20.call和ret指令</font></h2><p>ret指令用栈中的数据，修改IP的内容，从而实现近转移：<br>retf指令用栈中的数据，修改CS和IP的内容，从而实现远转移。</p>
+<p>cpu执行ret指令时，进行下面两步操作：相当于<code>pop ip</code></p>
+<ol>
+<li>(ip)&#x3D;((ss)*16 + (sp))</li>
+<li>(sp)&#x3D;(sp)+2<br>cpu执行retf指令时，进行下面四步操作：相当于<br><code>pop ip</code><br><code>pop cs</code></li>
+<li>(ip)&#x3D;((ss)*16+(sp))</li>
+<li>(sp)&#x3D;(sp)+2</li>
+<li>(cs)&#x3D;((ss)*16+(sp))</li>
+<li>(sp)&#x3D;(sp)+2</li>
+</ol>
+<p>CPU执行call指令时，进行两步操作：</p>
+<ol>
+<li>将当前的IP或CS和IP压入栈中；</li>
+<li>转移。</li>
+</ol>
+<p>使用方法分类:</p>
+<ul>
+<li><code>call 标号</code>（将当前的IP压栈后，转到标号处执行指令）<br>相当于:<br><code>push ip</code><br><code>jmp near ptr 标号</code><br>CPU执行此种格式的cal1指令时，进行如下的操作：</li>
+</ul>
+<ol>
+<li>(sp)&#x3D;(sp)-2<br> (ss)*16+(sp)&#x3D;(ip)</li>
+<li>(ip)&#x3D;(ip)十16位位移。</li>
+</ol>
+<ul>
+<li><p>16位位移&#x3D;标号处的地址-call指令后的第一个字节的地址：</p>
+</li>
+<li><p>16位位移的范围为-32768~32767，用补码表示：</p>
+</li>
+<li><p>16位位移由编译程序在编译时算出。</p>
+</li>
+<li><p><code>call far ptr 标号</code> 实现段间转移<br>CPU执行此种格式的cal1指令时，进行如下的操作。</p>
+</li>
+</ul>
+<ol>
+<li>(sp)&#x3D;(sp)-2<br>(ss)*16+(sp)&#x3D;(CS)<br>(Sp)&#x3D;(sp)-2<br>(ss)*16+(sp)&#x3D;(IP)</li>
+<li>(CS)&#x3D;标号所在段的段地址<br> (IP)&#x3D;标号在段中的偏移地址<br>相当于:<br><code>push cs</code><br><code>push ip</code><br><code>jmp far ptr 标号</code></li>
+</ol>
+<ul>
+<li><p><code>call 16位reg</code> 转移地址在寄存器中的call指令<br>功能:<br>(sp)&#x3D;(sp)-2<br>(ss)*16+(sp)&#x3D;(IP)<br>(IP)&#x3D;(16位reg)<br>相当于：<br><code>push ip</code><br><code>jmp 16位reg</code></p>
+</li>
+<li><p><code>call word ptr 内存单元地址</code> 转移地址在内存中的call指令<br>相当于：<br><code>push ip</code><br><code>jmp word ptr 内存单元地址</code></p>
+</li>
+<li><p><code>call dword ptr 内存单元地址</code><br>相当于:<br><code>push cs</code><br><code>push ip</code><br><code>jmp dword ptr 内存单元地址</code></p>
+</li>
+</ul>
+<h2 id="21-mul指令"><a href="#21-mul指令" class="headerlink" title="21.mul指令"></a><font color="#c00000">21.mul指令</font></h2><ol>
+<li>两个相乘的数：两个相乘的数，要么都是8位，要么都是16位。如果是8位，一个默认放在AL中，另个放在8位r©g或内存字节单元中；如果是16位，一个默认在AX中，另一个放在16位reg或内存字单元中。</li>
+<li>结果：如果是8位乘法，结果默认放在AX中；如果是16位乘法，结果高位默认在DX中存放，低位在AX中放。</li>
+</ol>
 
                 
             </div>
@@ -421,34 +584,34 @@
             <div class="reprint__author">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-user">
-                        Author:
+                        文章作者:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="/about" rel="external nofollow noreferrer">John Doe</a>
+                    <a href="/about" rel="external nofollow noreferrer">0xh3y3</a>
                 </span>
             </div>
             <div class="reprint__type">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-link">
-                        Link:
+                        文章链接:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://example.com/2023/10/18/hello-world/">http://example.com/2023/10/18/hello-world/</a>
+                    <a href="https://0xh3y3.github.io/2023/10/18/8086%E6%B1%87%E7%BC%96/">https://0xh3y3.github.io/2023/10/18/8086%E6%B1%87%E7%BC%96/</a>
                 </span>
             </div>
             <div class="reprint__notice">
                 <span class="reprint-meta" style="font-weight: bold;">
                     <i class="fas fa-copyright">
-                        Reprint policy:
+                        版权声明:
                     </i>
                 </span>
                 <span class="reprint-info">
-                    All articles in this blog are used except for special statements
+                    本博客所有文章除特別声明外，均采用
                     <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
-                    reprint policy. If reproduced, please indicate source
-                    <a href="/about" target="_blank">John Doe</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">0xh3y3</a>
                     !
                 </span>
             </div>
@@ -457,7 +620,7 @@
 
     <script async defer>
       document.addEventListener("copy", function (e) {
-        let toastHTML = '<span>Copied successfully, please follow the reprint policy of this article</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">more</a>';
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
         M.toast({html: toastHTML})
       });
 
@@ -472,7 +635,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">No tag</span>
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -491,39 +654,6 @@
 
                 </div>
             </div>
-            
-                <div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
-
-    <!-- Modal Structure -->
-    <div id="rewardModal" class="modal">
-        <div class="modal-content">
-            <a class="close modal-close"><i class="fas fa-times"></i></a>
-            <h4 class="reward-title">你的赏识是我前进的动力</h4>
-            <div class="reward-content">
-                <div class="reward-tabs">
-                    <ul class="tabs row">
-                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
-                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
-                    </ul>
-                    <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
-                    </div>
-                    <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-
-<script>
-    $(function () {
-        $('.tabs').tabs();
-    });
-</script>
-
             
         </div>
     </div>
@@ -549,54 +679,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;Previous</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/10/18/%E6%B1%87%E7%BC%96/">
+                <a href="/2023/10/18/8086%E6%B1%87%E7%BC%96/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/7.jpg" class="responsive-img" alt="汇编">
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
                         
-                        <span class="card-title">汇编</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-18
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            John Doe
-                            
-                        </span>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                Current&nbsp;<i class="far fa-dot-circle"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/10/18/hello-world/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="Hello World">
-                        
-                        <span class="card-title">Hello World</span>
+                        <span class="card-title"></span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -612,7 +706,45 @@
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
-                            John Doe
+                            0xh3y3
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
+            </div>
+            <div class="card">
+                <a href="/2023/10/18/8086%E6%B1%87%E7%BC%96/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-18
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            0xh3y3
                             
                         </span>
                     </div>
@@ -653,7 +785,7 @@
     </div>
     <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
         <div class="toc-widget card" style="background-color: white;">
-            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;TOC</div>
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
             <div id="toc-content"></div>
         </div>
     </div>
@@ -802,7 +934,7 @@
             
                 <span id="year">2019-2023</span>
             
-            <a href="/about" target="_blank">John Doe</a>
+            <a href="/about" target="_blank">0xh3y3</a>
             |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             
@@ -814,13 +946,13 @@
             
             
                 <span id="busuanzi_container_site_pv">
-                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;Total visits:&nbsp;
+                &nbsp;|&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;
                     <span id="busuanzi_value_site_pv" class="white-color"></span>
             </span>
             
             
                 <span id="busuanzi_container_site_uv">
-                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;Total visitors:&nbsp;
+                &nbsp;|&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;
                     <span id="busuanzi_value_site_uv" class="white-color"></span>
             </span>
             
@@ -832,13 +964,13 @@
             
         </div>
         <div class="col s12 m4 l4 social-link social-statis">
-    <a href="https://github.com/blinkfox" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+    <a href="https://github.com/0xh3y3" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
         <i class="fab fa-github"></i>
     </a>
 
 
 
-    <a href="mailto:1181062873@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+    <a href="mailto:2579290631@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
         <i class="fas fa-envelope-open"></i>
     </a>
 
@@ -848,7 +980,7 @@
 
 
 
-    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1181062873" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1181062873" data-position="top" data-delay="50">
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=2579290631" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 2579290631" data-position="top" data-delay="50">
         <i class="fab fa-qq"></i>
     </a>
 
@@ -873,8 +1005,8 @@
 <div id="searchModal" class="modal">
     <div class="modal-content">
         <div class="search-header">
-            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;Search</span>
-            <input type="search" id="searchInput" name="s" placeholder="Please enter a search keyword"
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
                    class="search-input">
         </div>
         <div id="searchResult"></div>
