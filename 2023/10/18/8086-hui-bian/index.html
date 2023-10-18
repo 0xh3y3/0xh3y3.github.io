@@ -4,12 +4,8 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="0xh3y3">
-    <meta name="description" content="物理地址 &amp;#x3D; 段地址x16 + 偏移地址 &amp;#x3D; 基础地址 + 偏移地址
-1.debug的使用
-用Debug的R命令查看、改变CPU寄存器的内容：
-用Debug的D命令查看内存中的内容：
-用Debug的E命令改写内存中的内容">
+    <meta name="keywords" content="8086汇编, 0xh3y3">
+    <meta name="description" content="浅浅学一下">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -21,7 +17,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>0xh3y3</title>
+    <title>8086汇编 | 0xh3y3</title>
     <link rel="icon" type="image/png" href="/favicon.png">
     
 
@@ -56,7 +52,8 @@
 
 <meta name="generator" content="Hexo 6.3.0"></head>
 
-
+<!--崩溃欺骗-->
+<script type="text/javascript" src="/js/FunnyTitle.js"></script>
 <body>
     <header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
@@ -173,7 +170,7 @@
         <div class="logo-name">0xh3y3</div>
         <div class="logo-desc">
             
-            Never really desperate, only the lost of the soul.
+            本网站是个人兴趣爱好，总结分享经验，记录生活点滴的平台，希望在以后的学习旅途中，走出自己的风景
             
         </div>
     </div>
@@ -336,12 +333,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/images/assembly.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">8086汇编</h1>
                 </div>
             </div>
         </div>
@@ -363,12 +360,25 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%B1%87%E7%BC%96/">
+                                <span class="chip bg-color">汇编</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/%E9%80%86%E5%90%91/" class="post-category">
+                                逆向
+                            </a>
+                        
+                    </div>
                     
                 </div>
             </div>
@@ -382,16 +392,40 @@
                 
 
                 
-
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2023-10-18
+                </div>
                 
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.2k
+                </div>
+                
 
                 
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    9 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
             </div>
         </div>
         <hr class="clearfix">
 
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        <script src="/libs/prism/prism.js"></script>
         
 
         
@@ -416,16 +450,20 @@
 <li>偏移地址为16位</li>
 <li>偏移地址的变化范围0-FFFFH</li>
 </ul>
-<h2 id="4-DS段寄存器-DS-address"><a href="#4-DS段寄存器-DS-address" class="headerlink" title="**4.DS段寄存器 DS:[address]"></a>**<font color="#c00000">4.DS段寄存器 DS:[address]</font></h2><ul>
+<h2 id="4-DS段寄存器-DS-address"><a href="#4-DS段寄存器-DS-address" class="headerlink" title="4.DS段寄存器 DS:[address]"></a><strong><font color="#c00000">4.DS段寄存器 DS:[address]</font></strong></h2><ul>
 <li>86CPU不支持将数据直接放入段寄存器中需要使用一个普通寄存器做转换 mov al:[0]  一般形式寄存器:[] 如果缺省，则默认为ds段</li>
 </ul>
-<h2 id="5-内存单元"><a href="#5-内存单元" class="headerlink" title="**5.内存单元"></a>**<font color="#c00000">5.内存单元</font></h2><ul>
+<h2 id="5-内存单元"><a href="#5-内存单元" class="headerlink" title="5.内存单元"></a><strong><font color="#c00000">5.内存单元</font></strong></h2><ul>
 <li>“[…]”表示一个内存单元，“[…]”中的0表示内存单元的偏移地址</li>
 </ul>
 <h2 id="6-指令"><a href="#6-指令" class="headerlink" title="6.指令"></a><strong><font color="#c00000">6.指令</font></strong></h2><ul>
 <li>inc 为自增指令     inc bx &#x3D;&#x3D;&gt; bx &#x3D; bx+1</li>
 <li>dec 自减指令</li>
-<li>loop循环中 有一个cx的寄存器在做自减运算即cx &#x3D; cx-1 直到cx&#x3D;0 为止跳出循环  用法如下： <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> 用cx和1oop指令相配合实现循环功能的程序框架如下。</span><br><span class="line">	mov cx,循环次数</span><br><span class="line">S:</span><br><span class="line">	循环执行的程序段</span><br><span class="line">	loop s</span><br></pre></td></tr></table></figure></li>
+<li>loop循环中 有一个cx的寄存器在做自减运算即cx &#x3D; cx-1 直到cx&#x3D;0 为止跳出循环  用法如下： <pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"> 用cx和1oop指令相配合实现循环功能的程序框架如下。
+	mov cx,循环次数
+S:
+	循环执行的程序段
+	loop s<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 <li>CPU执行loop时，要进行两步操作:</li>
 </ul>
 <ol>
@@ -445,7 +483,9 @@
 </ol>
 <h2 id="7-注意事项"><a href="#7-注意事项" class="headerlink" title="7.注意事项"></a><strong><font color="#c00000">7.注意事项</font></strong></h2><ol>
 <li>而在汇编源程序中，数据不能以字母开头，所以要在前面加0。比如，9138h在汇编源程序中可以直接写为“9138h”，而A000h在汇编源程序中要写为“0A000h”</li>
-<li>mov ds:[0],1 此时并不知道1是多长所以通过<span style="background:#d3f8b6">X ptr</span>操作符来指明内存长度,8086里可以为byte和word 一个word等于两个byte<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mov word ptr ds:[0],1</span><br><span class="line">inc byte ptr [bx] //bx自增1</span><br><span class="line">add word ptr [bp],2</span><br></pre></td></tr></table></figure></li>
+<li>mov ds:[0],1 此时并不知道1是多长所以通过<span style="background:#d3f8b6">X ptr</span>操作符来指明内存长度,8086里可以为byte和word 一个word等于两个byte<pre class="line-numbers language-none"><code class="language-none">mov word ptr ds:[0],1
+inc byte ptr [bx] &#x2F;&#x2F;bx自增1
+add word ptr [bp],2<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h2 id="8-栈"><a href="#8-栈" class="headerlink" title="8.栈"></a><strong><font color="#c00000">8.栈</font></strong></h2><ul>
 <li>SS:SP</li>
@@ -473,16 +513,45 @@
 <li>mov ax,[bx]             (ax) &#x3D; ((ds)*16+(bx))</li>
 <li>mov [bx],ax            ((ds)*16+(bx))&#x3D;(ax)</li>
 </ul>
-<h2 id="10-bx-idata"><a href="#10-bx-idata" class="headerlink" title="**10.[bx + idata]"></a>**<font color="#c00000">10.[bx + idata]</font></h2><p><font color="#548dd4">mov ax,[bx+200]</font></p>
+<h2 id="10-bx-idata"><a href="#10-bx-idata" class="headerlink" title="10.[bx + idata]"></a><strong><font color="#c00000">10.[bx + idata]</font></strong></h2><p><font color="#548dd4">mov ax,[bx+200]</font></p>
 <ul>
 <li>含义:将一个内存单元的内容送入ax,长度为2个字节，偏移地址为bx的值+200，段地址是ds</li>
-<li>（ax） &#x3D; ((ds)*16+(bx)+200)<br>其他写法:<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">mov ax,[200+bx]</span><br><span class="line">mov ax,200[bx]</span><br><span class="line">mov ax,[bx].200</span><br></pre></td></tr></table></figure></li>
+<li>（ax） &#x3D; ((ds)*16+(bx)+200)<br>其他写法:<pre class="line-numbers language-none"><code class="language-none">mov ax,[200+bx]
+mov ax,200[bx]
+mov ax,[bx].200<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h2 id="11-SI和DI"><a href="#11-SI和DI" class="headerlink" title="11.SI和DI"></a><font color="#c00000">11.SI和DI</font></h2><p>si和di也是寄存器，和bx功能相近</p>
 <ul>
-<li>用si和di实现将字符串‘welcome to masm！’复制到它后面的数据区中。<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">assume cs:codesg,ds:datasg</span><br><span class="line">datasg segment</span><br><span class="line">	db &#x27;welcome to masm&#x27;</span><br><span class="line">	db &#x27;...............&#x27;</span><br><span class="line">datasg ends</span><br><span class="line">codesg segment</span><br><span class="line">start:</span><br><span class="line">	mov ax,datasg</span><br><span class="line">	mov ds,ax</span><br><span class="line">	mov si,0</span><br><span class="line">	mov di,16</span><br><span class="line"></span><br><span class="line">	mov cx,8</span><br><span class="line">s:  mov ax,[s1]</span><br><span class="line">	mov [di],ax</span><br><span class="line">	add si,2</span><br><span class="line">	add di,2</span><br><span class="line">	loop s</span><br><span class="line"></span><br><span class="line">	mov ah,41h</span><br><span class="line">	int 21h</span><br><span class="line">codesg ends</span><br><span class="line">end start</span><br></pre></td></tr></table></figure></li>
-<li>bx si di联合使用[bx+si]或者[bx+di]<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mov ax,[bx+si]</span><br><span class="line">mov ax,[bx][si]</span><br></pre></td></tr></table></figure></li>
-<li>更灵活的方式[bx+si+idata]和[bx+di+idata]<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">mov ax,[bx+200+si]</span><br><span class="line">mov ax,[200+bx+si]</span><br><span class="line">mov ax,200[bx][si]</span><br><span class="line">mov ax,[bx]200[si]</span><br><span class="line">mov ax,[bx][si].200</span><br></pre></td></tr></table></figure></li>
+<li>用si和di实现将字符串‘welcome to masm！’复制到它后面的数据区中。<pre class="line-numbers language-none"><code class="language-none">assume cs:codesg,ds:datasg
+datasg segment
+	db &#39;welcome to masm&#39;
+	db &#39;...............&#39;
+datasg ends
+codesg segment
+start:
+	mov ax,datasg
+	mov ds,ax
+	mov si,0
+	mov di,16
+
+	mov cx,8
+s:  mov ax,[s1]
+	mov [di],ax
+	add si,2
+	add di,2
+	loop s
+
+	mov ah,41h
+	int 21h
+codesg ends
+end start<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
+<li>bx si di联合使用[bx+si]或者[bx+di]<pre class="line-numbers language-none"><code class="language-none">mov ax,[bx+si]
+mov ax,[bx][si]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre></li>
+<li>更灵活的方式[bx+si+idata]和[bx+di+idata]<pre class="line-numbers language-none"><code class="language-none">mov ax,[bx+200+si]
+mov ax,[200+bx+si]
+mov ax,200[bx][si]
+mov ax,[bx]200[si]
+mov ax,[bx][si].200<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h2 id="12-寻址"><a href="#12-寻址" class="headerlink" title="12.寻址"></a><font color="#c00000">12.寻址</font></h2><ol>
 <li>[idata]用一个常量来表示地址，可用于直接定位一个内存单元；</li>
@@ -496,7 +565,10 @@
 <li>db：定义字节型数据 1字节</li>
 <li>dw：定义字型数据   2字节</li>
 <li>dd：用来定义double word 双字型数据 4字节</li>
-<li>dup：<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">db 重复的次数 dup (重复的字节型数据)</span><br><span class="line">例：db 3 dup（0） --&gt; db 0，0，0</span><br><span class="line">dw 重复的次数 dup (重复的字型数据)</span><br><span class="line">dd 重复的次数 dup (重复的双字型数据)</span><br></pre></td></tr></table></figure></li>
+<li>dup：<pre class="line-numbers language-none"><code class="language-none">db 重复的次数 dup (重复的字节型数据)
+例：db 3 dup（0） --&gt; db 0，0，0
+dw 重复的次数 dup (重复的字型数据)
+dd 重复的次数 dup (重复的双字型数据)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ol>
 <h2 id="15-转移指令"><a href="#15-转移指令" class="headerlink" title="15.转移指令"></a><font color="#c00000">15.转移指令</font></h2><p>简单来讲能够修改cs和ip的指令都是转移指令<br>8086CPU的转移行为有如下几类：</p>
 <ol>
@@ -508,20 +580,27 @@
 <li>过程</li>
 <li>中断</li>
 </ol>
-<h2 id="16-段内转移"><a href="#16-段内转移" class="headerlink" title="16.段内转移"></a><font color="#c00000">16.段内转移</font></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">jmp short 标号  （ip）= （ip） + 8位位移</span><br><span class="line">jmp near ptr 标号  （ip）= （ip）+ 16位位移</span><br></pre></td></tr></table></figure>
+<h2 id="16-段内转移"><a href="#16-段内转移" class="headerlink" title="16.段内转移"></a><font color="#c00000">16.段内转移</font></h2><pre class="line-numbers language-none"><code class="language-none">jmp short 标号  （ip）&#x3D; （ip） + 8位位移
+jmp near ptr 标号  （ip）&#x3D; （ip）+ 16位位移<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <ul>
 <li>8位位移&#x3D;标号处的地址-jmp指令后的第一个字节的地址</li>
 <li>short指明此处的位移为8位位移</li>
 <li>8位位移的范围-128~127，用补码表示</li>
 <li>8位位移由编译程序在编译时算出<br>16位类似</li>
 </ul>
-<h2 id="17-段间转移"><a href="#17-段间转移" class="headerlink" title="17.段间转移"></a><font color="#c00000">17.段间转移</font></h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">jmp far ptr 标号</span><br></pre></td></tr></table></figure>
+<h2 id="17-段间转移"><a href="#17-段间转移" class="headerlink" title="17.段间转移"></a><font color="#c00000">17.段间转移</font></h2><pre class="line-numbers language-none"><code class="language-none">jmp far ptr 标号<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+
 <h2 id="18-jmp与内存单元"><a href="#18-jmp与内存单元" class="headerlink" title="18.jmp与内存单元"></a><font color="#c00000">18.jmp与内存单元</font></h2><ol>
 <li>jmp word ptr 内存单元地址(段内转移)</li>
 <li>jmp dword ptr 内存单元地址(段间转移)</li>
 </ol>
 <h2 id="19-offest操作符"><a href="#19-offest操作符" class="headerlink" title="19.offest操作符"></a><font color="#c00000">19.offest操作符</font></h2><ul>
-<li>操作符offset在汇编语言中是由编译器处理的符号，它的功能是取得标号的偏移地址。  <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">assume cs:codesg</span><br><span class="line">codesg segment</span><br><span class="line">	start:mov ax,offset start ;相当于mov ax,0</span><br><span class="line">	s:mov ax,offset s         ;相当于mov ax,3</span><br><span class="line">codesg ends</span><br><span class="line">end start</span><br></pre></td></tr></table></figure></li>
+<li>操作符offset在汇编语言中是由编译器处理的符号，它的功能是取得标号的偏移地址。  <pre class="line-numbers language-asm" data-language="asm"><code class="language-asm">assume cs:codesg
+codesg segment
+	start:mov ax,offset start ;相当于mov ax,0
+	s:mov ax,offset s         ;相当于mov ax,3
+codesg ends
+end start<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre></li>
 </ul>
 <h2 id="20-call和ret指令"><a href="#20-call和ret指令" class="headerlink" title="20.call和ret指令"></a><font color="#c00000">20.call和ret指令</font></h2><p>ret指令用栈中的数据，修改IP的内容，从而实现近转移：<br>retf指令用栈中的数据，修改CS和IP的内容，从而实现远转移。</p>
 <p>cpu执行ret指令时，进行下面两步操作：相当于<code>pop ip</code></p>
@@ -598,7 +677,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://0xh3y3.github.io/2023/10/18/8086%E6%B1%87%E7%BC%96/">https://0xh3y3.github.io/2023/10/18/8086%E6%B1%87%E7%BC%96/</a>
+                    <a href="https://0xh3y3.github.io/2023/10/18/8086-hui-bian/">https://0xh3y3.github.io/2023/10/18/8086-hui-bian/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -635,7 +714,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%B1%87%E7%BC%96/">
+                                    <span class="chip bg-color">汇编</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -684,19 +767,18 @@
                 <i class="far fa-dot-circle"></i>&nbsp;本篇
             </div>
             <div class="card">
-                <a href="/2023/10/18/8086%E6%B1%87%E7%BC%96/">
+                <a href="/2023/10/18/8086-hui-bian/">
                     <div class="card-image">
                         
+                        <img src="/images/assembly.jpg" class="responsive-img" alt="8086汇编">
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">8086汇编</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            浅浅学一下
                         
                     </div>
                     <div class="publish-info">
@@ -705,13 +787,25 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            0xh3y3
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%80%86%E5%90%91/" class="post-category">
+                                    逆向
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B1%87%E7%BC%96/">
+                        <span class="chip bg-color">汇编</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -722,19 +816,18 @@
                 本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
-                <a href="/2023/10/18/8086%E6%B1%87%E7%BC%96/">
+                <a href="/2023/10/18/8086-hui-bian/">
                     <div class="card-image">
                         
+                        <img src="/images/assembly.jpg" class="responsive-img" alt="8086汇编">
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">8086汇编</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            
+                            浅浅学一下
                         
                     </div>
                     <div class="publish-info">
@@ -743,13 +836,25 @@
                             </span>
                         <span class="publish-author">
                             
-                            <i class="fas fa-user fa-fw"></i>
-                            0xh3y3
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/%E9%80%86%E5%90%91/" class="post-category">
+                                    逆向
+                                </a>
+                            
                             
                         </span>
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%B1%87%E7%BC%96/">
+                        <span class="chip bg-color">汇编</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -764,6 +869,9 @@
 <!-- 代码块功能依赖 -->
 <script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
 
+
+  <!-- 是否加载使用自带的 prismjs. -->
+  <script type="text/javascript" src="/libs/prism/prism.js"></script>
 
 
 <!-- 代码语言 -->
@@ -939,6 +1047,9 @@
             |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
             
             <br>
+            
+                &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                        class="white-color">2.2k</span>
             
             
             
@@ -1144,6 +1255,7 @@ $(function () {
     <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
     <script src="/js/matery.js"></script>
 
+
     
 
     
@@ -1154,6 +1266,14 @@ $(function () {
     
 
     <!-- 鼠标星星特效 -->
+     
+        <script type="text/javascript">
+            // 只在桌面版网页启用特效
+            var windowWidth = $(window).width();
+            if (windowWidth > 768) {
+                document.write('<script type="text/javascript" src="/libs/others/star.js"><\/script>');
+            }
+        </script>
     
 
      
@@ -1193,6 +1313,11 @@ $(function () {
 
     <!--腾讯兔小巢-->
     
+    
+    <script type="text/javascript" color="0,0,255"
+        pointColor="0,0,255" opacity='0.7'
+        zIndex="-1" count="99"
+        src="/libs/background/canvas-nest.js"></script>
     
 
     
