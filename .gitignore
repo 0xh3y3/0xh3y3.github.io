@@ -29,3 +29,8 @@ yarn.lock
 # ide
 .idea
 *.iml
+
+# source notes (Obsidian originals)
+/fork_gadget.md
+/ptrace.md
+【哲风壁纸】*

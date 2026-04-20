@@ -2,10 +2,24 @@
 
 @layer components {
     .card-base {
-        @apply rounded-[var(--radius-large)] overflow-hidden bg-[var(--card-bg)] transition;
+        @apply rounded-[var(--radius-large)] overflow-hidden transition;
+        background: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+    }
+    :is(.dark .card-base) {
+        background: rgba(30, 32, 38, 0.45);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
     }
     h1, h2, h3, h4, h5, h6, p, a, span, li, ul, ol, blockquote, code, pre, table, th, td, strong {
         @apply transition;
+    }
+    .prose table {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
     }
     .card-shadow {
         @apply drop-shadow-[0_2px_4px_rgba(0,0,0,0.005)]
@@ -65,16 +79,33 @@
         @apply opacity-0 pointer-events-none
     }
 
-    #toc-inner-wrapper {
-        mask-image: linear-gradient(to bottom, transparent 0%, black 2rem, black calc(100% - 2rem), transparent 100%);
-    }
-
     .hide-scrollbar {
         scrollbar-width: none;
         -ms-overflow-style: none;
     }
     .hide-scrollbar::-webkit-scrollbar {
         display: none;
+    }
+
+    .toc-scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: rgba(0, 0, 0, 0.12) transparent;
+    }
+    :is(.dark .toc-scrollbar) {
+        scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+    }
+    .toc-scrollbar::-webkit-scrollbar {
+        width: 4px;
+    }
+    .toc-scrollbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .toc-scrollbar::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 0, 0.12);
+        border-radius: 4px;
+    }
+    :is(.dark .toc-scrollbar)::-webkit-scrollbar-thumb {
+        background-color: rgba(255, 255, 255, 0.15);
     }
 
     .text-90 {
@@ -149,4 +180,56 @@
         color: var(--codeblock-bg);
     }
   }
+}
+
+/* Frosted glass: background image for blur effect */
+html {
+    background-image:
+        radial-gradient(ellipse at 20% 50%, oklch(0.90 0.06 var(--hue) / 0.35), transparent 50%),
+        radial-gradient(ellipse at 80% 20%, oklch(0.92 0.04 calc(var(--hue) + 40) / 0.25), transparent 50%),
+        radial-gradient(ellipse at 60% 80%, oklch(0.88 0.05 calc(var(--hue) - 30) / 0.2), transparent 50%);
+    background-attachment: fixed;
+}
+html.dark {
+    background-color: rgb(20,21,25);
+    position: relative;
+}
+/* Video background halves */
+/* Video wrapper clips to show each half */
+.bg-video-wrapper {
+    position: fixed;
+    top: 0;
+    height: 100%;
+    width: 55%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 0;
+}
+.bg-video-wrapper-left {
+    left: 0;
+}
+.bg-video-wrapper-right {
+    right: 0;
+}
+.bg-video-wrapper video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+    transform: scale(1.16);
+}
+/* Hide 小兰 from left video (fade out right half) */
+.bg-video-wrapper-left video {
+    mask-image: linear-gradient(to right, black 45%, transparent 48%);
+    -webkit-mask-image: linear-gradient(to right, black 45%, transparent 48%);
+}
+/* Hide 柯南 from right video (fade out left half) */
+.bg-video-wrapper-right video {
+    left: auto;
+    right: 0;
+    mask-image: linear-gradient(to left, black 45%, transparent 48%);
+    -webkit-mask-image: linear-gradient(to left, black 45%, transparent 48%);
 }

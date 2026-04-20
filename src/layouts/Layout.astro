@@ -151,6 +151,24 @@ const bannerOffset =
 	<body class=" min-h-screen transition " class:list={[{"lg:is-home": isHomePage, "enable-banner": enableBanner}]}
 		  data-overlayscrollbars-initialize
 	>
+		<!-- Center cover image (fills the middle gap between left/right videos) -->
+		<div class="hidden dark:block fixed top-0 left-1/2 -translate-x-1/2 h-full pointer-events-none" style="z-index:0;width:50vw">
+			<img src="/bg-center.png" alt="" class="w-full h-full object-cover">
+		</div>
+		<!-- Video Background split left/right (dark mode only) -->
+		<div class="hidden dark:block bg-video-wrapper bg-video-wrapper-left">
+			<video autoplay muted loop playsinline>
+				<source src="/bg-video.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="hidden dark:block bg-video-wrapper bg-video-wrapper-right">
+			<video autoplay muted loop playsinline>
+				<source src="/bg-video.mp4" type="video/mp4">
+			</video>
+		</div>
+		<!-- Dark overlay -->
+		<div class="hidden dark:block fixed inset-0 bg-[rgba(10,12,20,0.45)] pointer-events-none" style="z-index:1"></div>
+
 		<ConfigCarrier></ConfigCarrier>
 		<slot />
 
